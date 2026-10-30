@@ -19,7 +19,7 @@ The AI Gym Posture Checker is a senior design project that uses computer vision 
 1. Install Python and connect a webcam.
 2. Install the required libraries using python -m pip install -r requirements.txt.
 3. Download the MediaPipe Pose Landmarker Full model and save it as pose_landmarker_full.task in the project folder.
-4. Run python squat_phase_detection.py.
+4. Run python Both Angles with Phases.py.
 5. Stand where your body is visible to the camera and perform squats.
 6. Press ESC to close the program.
 
