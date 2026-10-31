@@ -218,3 +218,10 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Local exercise output
+bicep_curls/bicep_curl_results.csv
+squat_measurements_*.csv
+
+# macOS files
+.DS_Store

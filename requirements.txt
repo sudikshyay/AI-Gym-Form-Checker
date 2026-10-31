@@ -1,2 +1,6 @@
+
+# AI Gym Form Checker
+# Python dependencies
+
 mediapipe
 opencv-contrib-python

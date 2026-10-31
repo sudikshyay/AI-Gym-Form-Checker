@@ -1,0 +1,7 @@
+Test	                        Expected outcome	            Actual result
+5 complete curls	            Counts 5	                    Not yet recorded
+10 complete curls	            Counts 10	                    Not yet recorded
+5 partial curls	                Does not count as complete	    Not yet recorded
+Arm leaves camera view	        Does not count false reps	    Not yet recorded
+Voice announcement	            Speaks when a rep is counted	Not yet recorded
+CSV output	                    Saves timestamps and angles	    Not yet recorde
