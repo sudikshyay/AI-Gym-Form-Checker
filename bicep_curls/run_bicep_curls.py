@@ -77,13 +77,19 @@ def speak(message):
     ):
         return
 
-    voice_process = subprocess.Popen(
-        ["say", message],
-        stdout=subprocess.DEVNULL,
-        stderr=subprocess.DEVNULL
-    )
+    command = (
+    ["say", message]
+    if sys.platform == "darwin"
+    else ["espeak-ng", message]
+)
 
-    last_spoken_time = current_time
+voice_process = subprocess.Popen(
+    command,
+    stdout=subprocess.DEVNULL,
+    stderr=subprocess.DEVNULL
+)
+
+last_spoken_time = current_time
 
 
 # --------------------------------------------------
@@ -119,8 +125,12 @@ last_timestamp = -1
 # --------------------------------------------------
 
 # Uses the selected camera at index 0.
-cap = cv2.VideoCapture(0, cv2.CAP_AVFOUNDATION)
+import sys
 
+if sys.platform == "darwin":
+    cap = cv2.VideoCapture(0, cv2.CAP_AVFOUNDATION)
+else:
+    cap = cv2.VideoCapture(0, cv2.CAP_V4L2)
 if not cap.isOpened():
     raise RuntimeError(
         "Could not open webcam. Check camera permissions."
